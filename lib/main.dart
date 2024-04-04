@@ -1,9 +1,11 @@
+import 'package:cpuesp32/screens/screen_configuracion.dart';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import './constants.dart';
-import './screens/screen_contruction.dart';
+// import './screens/screen_contruction.dart';
 import './screens/screen_home.dart';
-import './screens/screen_api_states.dart';
+// import './screens/screen_api_states.dart';
 import './screens/screen_cpu.dart';
 import './screens/screen_modbus.dart';
 import './screens/screen_controlador.dart';
@@ -86,7 +88,7 @@ class _MyHomePageState extends State<MyHomePage> {
     ScreenHome(),
     ScreenCpu(),
     ScreenControlador(),
-    ScreenContruction(name: "Teclado"),
+    ScreenConfiguracion(),
     ScreenModbus(),
   ];
 
@@ -149,8 +151,8 @@ class _MyHomePageState extends State<MyHomePage> {
                 },
               ),
               ListTile(
-                leading: Icon(Icons.keyboard),
-                title: const Text('Teclado'),
+                leading: const Icon(Icons.settings_rounded),
+                title: const Text('Configuracion'),
                 selected: _selectedIndex == 4,
                 onTap: () {
                   // Update the state of the app
